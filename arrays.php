@@ -9,8 +9,9 @@ $my_load = function ($classname) {
     }
 };
 
+
 \spl_autoload_register($my_load);
 
-\myClasses\Ladder::run1();
-\myClasses\Ladder::run2();
-\myClasses\Ladder::run3();
+echo "<h2><a target='_blank' href='http://task4developer.tilda.ws/backend-easy-task'>Задача 2: массивы</a></h2><br><br>";
+
+\myClasses\Arrays::run1();
