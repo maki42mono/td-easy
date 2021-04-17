@@ -2,7 +2,7 @@
 
 // получаем все классы. Один класс — одно задание
 $my_load = function ($classname) {
-    $path = __DIR__ . DIRECTORY_SEPARATOR . "$classname.php";
+    $path = __DIR__ . DIRECTORY_SEPARATOR;
 
     if (file_exists($path)) {
         require_once($path);

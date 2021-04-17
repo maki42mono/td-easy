@@ -1,7 +1,7 @@
 <?php
 // получаем все классы. Один класс — одно задание
 $my_load = function ($classname) {
-    $path = __DIR__ . DIRECTORY_SEPARATOR . "$classname.php";
+    $path = __DIR__ . DIRECTORY_SEPARATOR;
 
     if (file_exists($path)) {
         require_once($path);
@@ -45,6 +45,6 @@ $rand_phone_number = \myClasses\PhoneDisaster::getRandPhoneNumber();
         $count++;
     }
     ?>
-    <script src="src/phone-disaster-replacement.js?<?=time()?>"></script>
+    <script src="../src/phone-disaster-replacement.js?<?=time()?>"></script>
 </body>
 </html>
