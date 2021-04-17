@@ -66,23 +66,28 @@ class Arrays
 
     public function __toString()
     {
-//        $res = "<style></style>";
         $res = "<table>";
         $style = "align='right' width='20px'";
         $res .= "<tr><td></td>";
+
+//        выводим сумму по строкам
         foreach ($this->row_sum as $curr) {
             $res .= "<td {$style}><b>{$curr}</b></td>";
         }
         $res .= "</tr>";
+
         for ($i = 0; $i < $this->col; $i++) {
             $res .= "<tr>";
+
             for ($j = 0; $j < $this->row; $j++) {
+//        выводим сумму по столбцам в 1-ю колонку
                 if ($j == 0) {
                     $res .= "<td {$style}><b>{$this->column_sum[$i]}</b></td>";
                 }
 
                 $res .= "<td {$style}'>{$this->arr[$i][$j]}</td>";
             }
+
             $res .= "</tr>";
         }
         $res .= "</table>";
