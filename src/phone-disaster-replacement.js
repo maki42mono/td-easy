@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 allLinks[i].setAttribute("href", "tel:" + myCityNumberArr[1]);
             }
         }
-    }, 1000);
+    }, 2500);
 
 });

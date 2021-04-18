@@ -35,10 +35,12 @@ class Arrays
         }
     }
 
-    private function getRand(int $min, int $max)
+    private function getRand(int $min, int $max): int
     {
         $limit = $this->row * $this->col;
-        if ($max < ($limit)) die("Max должен быть больше {$limit}, иначе залупится цикл");
+        if ($max < ($limit)) {
+            throw new \Exception("Max должен быть больше {$limit}, иначе залупится цикл");
+        }
         return rand($min, $max);
     }
 
@@ -59,12 +61,12 @@ class Arrays
         $this->uniq[$val] = 'Q';
     }
 
-    public function getArr()
+    public function getArr(): array
     {
         return $this->arr;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         $res = "<table>";
         $style = "align='right' width='20px'";
@@ -95,7 +97,7 @@ class Arrays
         return $res;
     }
 
-    public static function run1(): void
+    public static function run1()
     {
         echo "Тест 5 * 7, от 1 до 1000 (как в задании)<br><br>";
 
@@ -105,7 +107,7 @@ class Arrays
         echo "<br><br>";
     }
 
-    public static function run2(): void
+    public static function run2()
     {
         echo "Тест 2 * 3, от 1 до 6, чтобы было удобнее проверить суммы<br><br>";
 
@@ -115,7 +117,7 @@ class Arrays
         echo "<br><br>";
     }
 
-    public static function run3(): void
+    public static function run3()
     {
         echo "Тест 5 * 7, чтобы удобнее было увидеть уникальность значений<br><br>";
 
@@ -125,7 +127,7 @@ class Arrays
         echo "<br><br>";
     }
 
-    public static function run4(): void
+    public static function run4()
     {
         echo "Тест 5 * 7 со значениями от 1 до 34, чтобы показать ошибку<br><br>";
 
